@@ -1,161 +1,205 @@
 @import url("https://use.typekit.net/jmk3xov.css");
 
-canvas {
-position: fixed;
-top: 0;
-left: 0;
-}
-
-
+/* General Settings */
 :root {
---dark-bg: rgba(15, 15, 15, 0.95);
---spacing: 350px;
+  --dark-bg: #0b0b0b;
+  --primary-color: #00ffff;
+  --secondary-color: #ffffff;
+  --heading-font: elevon, sans-serif;
+  --body-font: brandon-grotesque, sans-serif;
 
-font-family: brandon-grotesque, sans-serif;
-font-weight: 400;
-font-style: normal;
+  font-family: var(--body-font);
+  font-weight: 400;
+  font-style: normal;
 }
 
-
-main {
-width: 100vw;
-color: white;
-z-index: 99;
-position: absolute;
-width: 100%;
-margin: 0px auto;
-padding: 120px 0px;
-
-display: grid;
-grid-template-columns: repeat(12, 1fr);
-}
-
-h1, h2, h3, blockquote {
-font-family: elevon, sans-serif;
-font-weight: 700;
-font-style: normal;
-}
-
-canvas {
-position: fixed;
-top: 0;
-left: 0;
-}
-
-
-
-header {
-  background: var(--dark-bg);
-  grid-column: 2 / span 5;
-  font-size: 2.5rem;
-  padding: 2rem;
-  margin-bottom: var(--spacing);
-}
-
-section {
-  grid-column: 2 / 8;
-  padding: 1rem;
-  background: var(--dark-bg);
-  font-size: 1.25rem;
-  line-height: 1.5;
-  margin-bottom: var(--spacing);
-}
-
-blockquote {
+body {
+  background-color: var(--dark-bg);
+  color: var(--secondary-color);
   margin: 0;
   padding: 0;
-  grid-column: 2 / span 9;
-  margin-bottom: var(--spacing);
+  line-height: 1.8;
 }
 
-blockquote p {
-  color: black;
-  background-color: white;
-  font-size: 4rem;
-  display: inline;
-  line-height: 1;
-}
-
-.left {
-  grid-column: 6 / 12;
-}
-
-/* Navigation Bar */
-nav {
+canvas {
   position: fixed;
   top: 0;
-  right: 0;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: top;
-  align-items: flex-end;
-  z-index: 1000;
-  padding: 2rem;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-nav ul li {
-  margin: 0;
-}
-
-nav ul li a {
-  font-size: 1.5rem; /* Big Font */
-  font-weight: 700;
-  text-transform: uppercase;
-  color: white;
-  text-decoration: none;
-  position: relative;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-/* Hover Animation */
-nav ul li a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
   left: 0;
-  width: 0;
-  height: 3px;
-  background: #00ffff; /* Dynamic Color */
-  transition: width 0.3s ease;
-}
-
-nav ul li a:hover::after {
-  width: 100%;
-}
-
-nav ul li a:hover {
-  color: #00ffff; /* Text changes color on hover */
-  transform: scale(1.1);
-}
-
-/* Click Animation */
-nav ul li a:active {
-  animation: clickEffect 0.2s ease;
-}
-
-@keyframes clickEffect {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.9);
-  }
-  100% {
-    transform: scale(1);
-  }
+  z-index: -1;
 }
 
 /* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(15, 15, 15, 0.7);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%;
+}
+
+/* Hero Section - Center Name */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.hero h1 {
+  font-family: var(--heading-font);
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.hero p.subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+/* Section Styling */
+section {
+  margin: 4rem auto;
+  padding: 2rem;
+  max-width: 1200px;
+  background-color: rgba(15, 15, 15, 0.95);
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+section h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+section p,
+section li {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+}
+
+/* Quote Section */
+.quote-section blockquote {
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  text-align: center;
+  color: var(--secondary-color);
+  margin: 2rem 0;
+  line-height: 1.4;
+}
+
+.quote-section blockquote p {
+  display: inline-block;
+  background: var(--primary-color);
+  color: #0b0b0b;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.skill-category h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.skill-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-category li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    gap: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p.subtitle {
+    font-size: 1.2rem;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
 }

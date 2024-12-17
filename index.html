@@ -1,117 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kunal Bajaj's Portfolio</title>
+    <title>Kunal Bajaj - Portfolio</title>
     <link rel="stylesheet" href="src/index.css" />
-  </head>
-  <body>
+</head>
+<body>
     <!-- Canvas Background -->
     <canvas id="bg"></canvas>
 
     <!-- Navigation Bar -->
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#accomplishments">Accomplishments</a></li>
-      </ul>
+    <nav aria-label="Main Navigation">
+        <div class="nav-container">
+        <ul id="primary-navigation" data-visible="false">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#accomplishments">Accomplishments</a></li>
+        </ul>
+        
+        </div>
     </nav>
 
     <!-- Main Content -->
     <main>
-      <!-- Header Section -->
-      <header id="home">
-        <h1>Kunal Bajaj</h1>
-        <p>🚀 Welcome to my Portfolio!</p>
-      </header>
+        <!-- Header Section -->
+        <header id="home" class="hero">
+            <div class="hero-content">
+                <h1>Kunal Bajaj</h1>
+                <p class="subtitle">🚀 Welcome to my Portfolio!</p>
+            </div>
+        </header>
 
-      <!-- Quote Section -->
-      <blockquote>
-        <p>A technologist with a passion for solving real-world problems.</p>
-      </blockquote>
+        <!-- Quote Section -->
+        <section class="quote-section">
+            <blockquote>
+                <p>"A technologist with a passion for solving real-world problems."</p>
+            </blockquote>
+        </section>
 
-     
+        <!-- Work Experience Section -->
+        <section id="experience" class="section">
+            <h2>💼 Work Experience</h2>
+            
+            <article class="experience-item">
+                <h3>Software Developer - Sheridan Centre for Applied AI</h3>
+                <ul>
+                    <li>Developed AI algorithms to predict NICU bed availability, reducing transfer decision time by 25%.</li>
+                    <li>Created a Pygame-based frontend simulation animation to visualize patient transfers between hospitals.</li>
+                    <li>Utilized Agile practices (Scrum) and Test-Driven Development (TDD) to ensure iterative development.</li>
+                    <li>Incorporated UML diagrams for clear system design.</li>
+                    <li>Collaborated with healthcare professionals to gather requirements, ensuring the system met real-world operational needs.</li>
+                </ul>
+            </article>
 
-      <!-- Work Experience Section -->
-      <section id="experience">
-        <h2>💼 Work Experience</h2>
+            <article class="experience-item">
+                <h3>AI Research Assistant - Oakville Public Library</h3>
+                <ul>
+                    <li>Received Sheridan's Generator Student Award for Innovation in Research.</li>
+                    <li>Researched and implemented state-of-the-art AI techniques, focusing on NLP and LLM.</li>
+                    <li>Created a chatbot for Oakville Public Library (OPL) that solved 90% of user queries accurately.</li>
+                    <li>Implemented a Retrieval Augmented Generation (RAG) system, enhancing chatbot accuracy by over 80%.</li>
+                    <li>Developed a robust API using FAST API for the backend.</li>
+                    <li>Designed a user-friendly frontend, reducing response time by 40%.</li>
+                </ul>
+            </article>
 
-        <h3>Software Developer - Sheridan Centre for Applied AI</h3>
-        <p>
-          Placeholder: Describe your work building robust AI models, backend
-          APIs, and collaborating on technical solutions.
-        </p>
+            <article class="experience-item">
+                <h3>Software Developer Intern - Freelance & Group Projects</h3>
+                <ul>
+                    <li>Implemented a communication layer for wearable sensors, optimizing data transfer speed by 20%.</li>
+                    <li>Developed software solutions using Arduino IDE with C++ for ESP32 hardware interfacing.</li>
+                    <li>Utilized Node-RED with JavaScript for backend integration, achieving 99% system reliability.</li>
+                    <li>Created a React-based frontend to visualize sensor data in real-time.</li>
+                    <li>Designed and implemented a MongoDB database to store and manage sensor data.</li>
+                    <li>Improved query efficiency by 25% for real-time analytics.</li>
+                </ul>
+            </article>
+        </section>
 
-        <h3>AI Research Assistant - Oakville Public Library</h3>
-        <p>
-          Placeholder: Add how you implemented NLP solutions, state-of-the-art
-          AI techniques, and improved accuracy by 25%.
-        </p>
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2>👨‍💻 Projects</h2>
+            <article class="project-item">
+                <h3>Groovify - iOS Application</h3>
+                <ul>
+                    <li>Implemented Spotify API to recommend playlists and songs tailored to user moods.</li>
+                    <li>Achieved 90% accuracy rate in mood-based recommendations during testing.</li>
+                    <li>Leveraged Firebase for user authentication and data persistence.</li>
+                    <li>Integrated TicketMaster API to provide concert notifications.</li>
+                    <li>Increased user engagement by 25% through personalized event updates.</li>
+                    <li>Optimized app performance, achieving a 15% faster response time for song recommendation queries.</li>
+                    <li>Utilized Figma wireframes to prototype user interactions.</li>
+                    <li>Improved app usability and navigation flow based on iterative feedback.</li>
+                </ul>
+            </article>
+        </section>
 
-        <h3>Software Developer Intern - Freelance & Group Projects</h3>
-        <p>
-          Placeholder: Highlight key projects, such as the music streaming app
-          or wearable sensor communication.
-        </p>
-      </section>
+        <!-- Technical Skills Section -->
+        <section id="skills" class="section">
+            <h2>🛠 Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>Swift</li>
+                        <li>Kotlin</li>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>Dart</li>
+                        <li>C/C++</li>
+                        <li>C#.NET</li>
+                        <li>SQL</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <ul>
+                        <li>UIKit</li>
+                        <li>SwiftUI</li>
+                        <li>CloudKit</li>
+                        <li>MapKit</li>
+                        <li>CoreLocation</li>
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>Flutter</li>
+                        <li>Langchain</li>
+                        <li>FastAPI</li>
+                        <li>PyTorch</li>
+                        <li>SpringBoot</li>
+                        <li>Sci-Kit Learn</li>
+                        <li>Transformers</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Practices</h3>
+                    <ul>
+                        <li>Git</li>
+                        <li>Docker</li>
+                        <li>AWS</li>
+                        <li>VS Code</li>
+                        <li>CI/CD</li>
+                        <li>XCode</li>
+                        <li>Firebase</li>
+                        <li>MS Office tools</li>
+                        <li>Agile (Scrum, Kanban)</li>
+                        <li>Test-Driven Development</li>
+                        <li>UML</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <ul>
+                        <li>PostgreSQL</li>
+                        <li>MongoDB</li>
+                        <li>Cassandra</li>
+                        <li>SQL Server</li>
+                        <li>Realm</li>
+                        <li>CoreData</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-      <!-- Projects Section -->
-      <section id="projects" class="light">
-        <h2>👨‍💻 Projects</h2>
-        <p>
-          Placeholder: Add descriptions of your most impactful projects, such as
-          apps, websites, or tools you've built. Highlight achievements,
-          technologies used, and results.
-        </p>
-      </section>
+        <!-- Personality Section -->
+        <section id="personality" class="section">
+            <h2>🌟 Personality & Values</h2>
+            <p>Passionate about learning, I thrive in collaborative environments and enjoy solving complex challenges. My approach combines curiosity, critical thinking, and a desire to make a meaningful impact. Beyond tech, I enjoy soccer, philosophy, and exploring how technology shapes our future.</p>
+        </section>
 
-      <!-- Technical Skills Section -->
-      <section id="skills" class="light">
-        <h2>🛠 Technical Skills</h2>
-        <ul>
-          <li>Programming Languages: Python, Swift, Dart, C#, Java</li>
-          <li>Frameworks & Libraries: Flutter, React, .NET, SwiftUI</li>
-          <li>Tools: FastAPI, Git, Firebase, CoreData</li>
-          <li>APIs: Spotify API, ChatGPT API</li>
-          <li>Database: MySQL, MongoDB</li>
-          <li>Cloud: AWS, Google Cloud</li>
-        </ul>
-      </section>
+        <!-- Accomplishments Section -->
+        <section id="accomplishments" class="section">
+            <h2>🏆 Accomplishments</h2>
+            <ul class="accomplishments-list">
+                <li>Awarded Sheridan's Generator Student Award for Innovation in Research</li>
+            </ul>
+        </section>
 
-      <!-- Personality Section -->
-      <section id="personality">
-        <h2>🌟 Personality & Values</h2>
-        <p>
-          Passionate about learning, I thrive in collaborative environments and
-          enjoy solving complex challenges. My approach combines curiosity,
-          critical thinking, and a desire to make a meaningful impact. Beyond
-          tech, I enjoy soccer, philosophy, and exploring how technology shapes
-          our future.
-        </p>
-      </section>
-
-      <!-- Accomplishments Section -->
-      <section id="accomplishments" class="light">
-        <h2>🏆 Accomplishments</h2>
-        <ul>
-          <li>
-            Awarded Sheridan's Generator Student Award for Innovation in
-            Research.
-          </li>
-        </ul>
-      </section>
-
-      <!-- Closing Quote -->
-      <blockquote>
-        <p>"The best way out is always through." <br />- Robert Frost</p>
-      </blockquote>
+        <!-- Closing Quote -->
+        <section class="quote-section">
+            <blockquote>
+                <p>"The best way out is always through."<br />- Robert Frost</p>
+            </blockquote>
+        </section>
     </main>
 
     <!-- JavaScript -->
     <script type="module" src="src/main.tsx"></script>
-  </body>
+</body>
 </html>

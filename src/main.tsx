@@ -72,3 +72,21 @@ document.body.onscroll = moveCamera;
 document.addEventListener('resize', onWindowResize);
 
 animate();
+
+const navToggle = document.querySelector(".mobile-nav-toggle");
+const navMenu = document.querySelector("#primary-navigation");
+
+if (navToggle) {
+    navToggle.addEventListener("click", () => {
+        if (navMenu) {
+            const visible = navMenu.getAttribute("data-visible");
+            if (visible === "false") {
+                navMenu.setAttribute("data-visible", "true");
+                navToggle.setAttribute("aria-expanded", "true");
+            } else {
+                navMenu.setAttribute("data-visible", "false");
+                navToggle.setAttribute("aria-expanded", "false");
+            }
+        }
+    });
+}
