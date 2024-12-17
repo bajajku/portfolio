@@ -2,26 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="src/index.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kunal Bajaj's Portfolio</title>
+    <link rel="stylesheet" href="src/index.css" />
   </head>
   <body>
+    <!-- Canvas Background -->
     <canvas id="bg"></canvas>
 
+    <!-- Navigation Bar -->
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#manifesto">Manifesto</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#personality">Personality</a></li>
+        <li><a href="#accomplishments">Accomplishments</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
     <main>
       <!-- Header Section -->
-      <header>
+      <header id="home">
         <h1>Kunal Bajaj</h1>
         <p>🚀 Welcome to my Portfolio!</p>
       </header>
 
+      <!-- Quote Section -->
       <blockquote>
         <p>A technologist with a passion for solving real-world problems.</p>
       </blockquote>
 
       <!-- Manifesto Section -->
-      <section>
+      <section id="manifesto">
         <h2>📜 Manifesto</h2>
         <p>
           I believe in using technology as a tool to empower people, solve
@@ -30,8 +46,9 @@
           implementation.
         </p>
       </section>
-<!-- Work Experience Section -->
-      <section class="left">
+
+      <!-- Work Experience Section -->
+      <section id="experience" class="left">
         <h2>💼 Work Experience</h2>
 
         <h3>Software Developer - Sheridan Centre for Applied AI</h3>
@@ -54,7 +71,7 @@
       </section>
 
       <!-- Projects Section -->
-      <section class="light">
+      <section id="projects" class="light">
         <h2>👨‍💻 Projects</h2>
         <p>
           Placeholder: Add descriptions of your most impactful projects, such as
@@ -64,7 +81,7 @@
       </section>
 
       <!-- Technical Skills Section -->
-      <section class="light">
+      <section id="skills" class="light">
         <h2>🛠 Technical Skills</h2>
         <ul>
           <li>Programming Languages: Python, Swift, Dart, C#, Java</li>
@@ -76,10 +93,8 @@
         </ul>
       </section>
 
-      
-
       <!-- Personality Section -->
-      <section>
+      <section id="personality">
         <h2>🌟 Personality & Values</h2>
         <p>
           Passionate about learning, I thrive in collaborative environments and
@@ -91,7 +106,7 @@
       </section>
 
       <!-- Accomplishments Section -->
-      <section class="light">
+      <section id="accomplishments" class="light">
         <h2>🏆 Accomplishments</h2>
         <ul>
           <li>
@@ -101,13 +116,13 @@
         </ul>
       </section>
 
-      <!-- Footer -->
+      <!-- Closing Quote -->
       <blockquote>
         <p>"The best way out is always through." <br />- Robert Frost</p>
       </blockquote>
-
     </main>
 
+    <!-- JavaScript -->
     <script type="module" src="src/main.tsx"></script>
   </body>
 </html>
