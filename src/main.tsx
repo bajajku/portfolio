@@ -45,11 +45,30 @@ scene.add(light);
 function animate() {
   requestAnimationFrame(animate);
 
-  galaxy.rotation.y += 0.001;
-  galaxy.rotation.x += 0.001;
+  galaxy.rotation.y += 0.002;
+  galaxy.rotation.x += 0.002;
+  light.intensity = 1 + 0.5 * Math.sin(Date.now() * 0.002);
 
   controls.update();
   renderer.render(scene, camera);
 }
+
+function onWindowResize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+function moveCamera() {
+  const t = document.body.getBoundingClientRect().top;
+  camera.position.z = t * -0.01;
+
+  camera.position.x = t * -0.0002;
+  camera.position.y = t * -0.0002;
+
+}
+
+document.body.onscroll = moveCamera;
+document.addEventListener('resize', onWindowResize);
 
 animate();
