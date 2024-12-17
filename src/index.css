@@ -203,3 +203,70 @@ section li {
     font-size: 2rem;
   }
 }
+
+/* Experience Cards Container */
+.experience-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Individual Card */
+.experience-card {
+  flex: 1 1 calc(33.333% - 1.5rem); /* Three cards in a row, responsive */
+  background: linear-gradient(135deg, #1e1e2e, #3a3a55);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 1.5rem;
+  color: #fff;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.experience-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  border-color: #00ffff;
+  box-shadow: 0 15px 30px rgba(0, 255, 255, 0.2);
+}
+
+/* Experience Card Title */
+.experience-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: #00ffff;
+}
+
+/* Experience Description */
+.experience-card p {
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+/* Tech Stack Blobs */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-stack span {
+  background: #00ffff;
+  color: #1e1e2e;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 20px;
+  padding: 0.3rem 0.8rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.tech-stack span:hover {
+  background: #ff8c00;
+  color: #fff;
+  transform: scale(1.1);
+}
