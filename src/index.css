@@ -326,6 +326,24 @@ section li {
   color: #fff;
   text-align: center;
 }
+/* Style for the link indicator */
+.link-indicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  color: #007BFF; /* A link color (can be adjusted) */
+  padding: 2px 6px; /* Adjust padding */
+  border-radius: 4px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.date-range {
+  font-size: 14px;
+  color: #6c757d; /* Muted color for dates */
+  margin-bottom: 10px;
+}
+
 
 /* Chatbot Popup Styles */
 #chatbot-popup {
