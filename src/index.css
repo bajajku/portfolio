@@ -292,6 +292,14 @@ section li {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Mobile view (for screens smaller than 768px) */
+@media (max-width: 768px) {
+  .experience-card {
+    flex: 1 1 100%; /* Stack cards vertically */
+    margin-bottom: 1rem; /* Add some space between stacked cards */
+  }
+}
+
 .experience-card:hover {
   transform: translateY(-10px) scale(1.03);
   border-color: #00ffff;

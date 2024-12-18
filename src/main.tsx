@@ -28,7 +28,7 @@ for (let i = 0; i < count; i++) {
 galaxyGeometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
 
 const galaxyMaterial = new THREE.PointsMaterial({
-  size: 0.2,
+  size: 0.3,
   color: 0x00ffff,
   transparent: true,
 });
@@ -60,10 +60,10 @@ function onWindowResize() {
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
-  camera.position.z = t * -0.02;
+  camera.position.z = t * -0.01;
 
-  camera.position.x = t * -0.002;
-  camera.position.y = t * -0.002;
+  camera.position.x = t * -0.001;
+  camera.position.y = t * -0.001;
 
 }
 
