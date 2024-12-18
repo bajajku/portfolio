@@ -118,6 +118,26 @@ nav ul li a.active::after {
   }
 }
 
+.thinking-effect {
+  font-size: 16px; /* Adjust text size */
+  color: #6c757d; /* Neutral, calming gray color */
+  font-style: italic; /* Adds emphasis */
+  animation: pulse 1.5s infinite; /* Subtle pulsing effect */
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
 
 .hero h1 {
   font-family: var(--heading-font);

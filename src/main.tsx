@@ -109,13 +109,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to send POST request and handle response
   const getBotResponse = async (question: string) => {
     const apiUrl =
-      "https://solid-spoon-pv6x7wx6pg7f9r7q-8000.app.github.dev/recommendation";
+      "https://portfolio-chatbot-production-5108.up.railway.app/recommendation";
 
     try {
       // Add a "bot is typing" message
       const typingMessage = document.createElement("div");
       typingMessage.classList.add("chat-message", "bot");
-      typingMessage.innerHTML = `<p class="chat-color">Thinking...</p>`;
+      typingMessage.innerHTML = `<p class="thinking-effect">Thinking...</p>`;
       chatBody.appendChild(typingMessage);
       chatBody.scrollTop = chatBody.scrollHeight;
 
