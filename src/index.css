@@ -92,7 +92,8 @@ nav ul li a.active::after {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 70vh;
+  padding-top: 10vh;
+  height: 30vh;
 }
 
 .hero h1 {
@@ -218,7 +219,7 @@ section li {
 /* Responsive Design */
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     gap: 1rem; /* Reduce gap between links */
   }
