@@ -46,6 +46,7 @@ function animate() {
 
   galaxy.rotation.y += 0.003;
   galaxy.rotation.x += 0.003;
+
   light.intensity = 1 + 0.5 * Math.sin(Date.now() * 0.002);
 
   controls.update();
@@ -60,10 +61,10 @@ function onWindowResize() {
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
-  camera.position.z = t * -0.012;
+  camera.position.z = t * -0.01;
 
-  camera.position.x = t * -0.009;
-  camera.position.y = t * -0.009;
+  camera.position.x = t * -0.004;
+  camera.position.y = t * -0.004;
 
 }
 
