@@ -32,15 +32,26 @@
                 <h1>Kunal Bajaj</h1>
                 <p class="subtitle">🚀 Welcome to my Portfolio!</p>
             </div>
-        </header>
-
-        <!-- Quote Section -->
-        <section class="quote-section">
-            <blockquote>
-                <p>"A technologist with a passion for solving real-world problems."</p>
-            </blockquote>
-        </section>
-
+            <section id="home">
+              <div class="chatbot-container">
+                <div id="chatbot-popup">
+                  <div id="chat-header">
+                    <h4>Hi, I'm KunalBot!</h4>
+                  </div>
+                  <div id="chat-body">
+                    <div class="chat-message bot">
+                      <p>Hi there! I'm KunalBot. I can guide you through my portfolio. Ask me about Kunal's skills, experience, or projects!</p>
+                    </div>
+                  </div>
+                  <div id="chat-footer">
+                    <input type="text" id="chat-input" placeholder="Type your question..." />
+                    <button id="chat-send" aria-label="Send Message">➤</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
+        </header> 
         <!-- Work Experience Section -->
         <section id="experience" class="section">
           <h2>💼 Work Experience</h2>
@@ -189,5 +200,6 @@
 
     <!-- JavaScript -->
     <script type="module" src="src/main.tsx"></script>
+    
 </body>
 </html>

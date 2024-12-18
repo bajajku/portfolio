@@ -90,3 +90,83 @@ if (navToggle) {
         }
     });
 }
+
+// TODO: Deploy the chatbot API and update the URL
+document.addEventListener("DOMContentLoaded", () => {
+  const chatInput = document.getElementById("chat-input") as HTMLInputElement;
+  const chatSend = document.getElementById("chat-send") as HTMLButtonElement;
+  const chatBody = document.getElementById("chat-body") as HTMLDivElement;
+
+  // Function to add a message to the chat
+  const addMessage = (message: string, isUser = false) => {
+    const messageDiv = document.createElement("div");
+    messageDiv.classList.add("chat-message", isUser ? "user" : "bot");
+    messageDiv.innerHTML = `<p>${message}</p>`;
+    chatBody.appendChild(messageDiv);
+    chatBody.scrollTop = chatBody.scrollHeight;
+  };
+
+  // Function to send POST request and handle response
+  const getBotResponse = async (question: string) => {
+    const apiUrl =
+      "https://solid-spoon-pv6x7wx6pg7f9r7q-8000.app.github.dev/recommendation";
+
+    try {
+      // Add a "bot is typing" message
+      const typingMessage = document.createElement("div");
+      typingMessage.classList.add("chat-message", "bot");
+      typingMessage.innerHTML = `<p>Thinking...</p>`;
+      chatBody.appendChild(typingMessage);
+      chatBody.scrollTop = chatBody.scrollHeight;
+
+      // Send POST request to the API
+      const response = await fetch(apiUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ question }),
+      });
+
+      // Check if the response is okay
+      if (!response.ok) {
+        throw new Error("Something went wrong. Please try again later.");
+      }
+
+      // Wait for the full response
+      const data = await response.json();
+
+      // Remove the "bot is typing" message
+      typingMessage.remove();
+
+      // Display the bot's response
+      addMessage(data.result || "Sorry, I couldn't understand that.");
+    } catch (error) {
+      console.error("Error:", error);
+
+      // Remove the "bot is typing" message and show error
+      const typingMessage = document.querySelector(".chat-message.bot:last-child");
+      if (typingMessage) typingMessage.remove();
+      addMessage("Unable to connect to the server. Please try again later.");
+    }
+  };
+
+  // Function to handle chat interactions
+  const handleChat = () => {
+    const userMessage = chatInput.value.trim();
+    if (!userMessage) return;
+
+    // Add user message to the chat
+    addMessage(userMessage, true);
+    chatInput.value = "";
+
+    // Send the question to the server
+    getBotResponse(userMessage);
+  };
+
+  // Event listeners for sending messages
+  chatSend.addEventListener("click", handleChat);
+  chatInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") handleChat();
+  });
+});

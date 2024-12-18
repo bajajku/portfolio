@@ -270,3 +270,101 @@ section li {
   color: #fff;
   transform: scale(1.1);
 }
+
+/* Chatbot Container: Bigger and Cleaner */
+.chatbot-container {
+  max-width: 800px; /* Increase size for better visibility */
+  margin: 2rem auto; /* Add spacing at the top */
+  padding: 2rem;
+  background: rgba(30, 30, 46, 0.85); /* Add semi-transparent background */
+  border-radius: 16px; /* Slightly larger border radius for a softer look */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Softer shadow for depth */
+  color: #fff;
+  text-align: center;
+}
+
+/* Chatbot Popup Styles */
+#chatbot-popup {
+  display: block;
+  padding: 1rem;
+}
+
+/* Header: Cleaner and Larger */
+#chat-header {
+  background: rgba(0, 255, 255, 0.9); /* Semi-transparent header */
+  color: #1e1e2e;
+  padding: 1.5rem;
+  border-radius: 12px 12px 0 0;
+  font-weight: bold;
+  font-size: 1.5rem; /* Increase font size */
+  text-align: center;
+}
+
+/* Chat Body: Transparent with Smooth Scrolling */
+#chat-body {
+  max-height: 300px; /* Larger height */
+  overflow-y: auto;
+  padding: 1.5rem;
+  background: rgba(46, 46, 77, 0.8); /* Semi-transparent */
+  border-radius: 0 0 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* More space between messages */
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2); /* Inner shadow for depth */
+}
+
+/* Chat Messages: Refined */
+.chat-message.bot {
+  background: rgba(0, 255, 255, 0.8); /* Semi-transparent */
+  color: #1e1e2e;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  text-align: left;
+  line-height: 1.6;
+  font-size: 1.2rem; /* Slightly larger font */
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.3); /* Glow effect */
+}
+
+.chat-message.user {
+  background: rgba(58, 58, 85, 0.8); /* Semi-transparent */
+  color: #fff;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  align-self: flex-end;
+  line-height: 1.6;
+  font-size: 1.2rem;
+}
+
+/* Footer: Cleaner Input and Button */
+#chat-footer {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+#chat-input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent input */
+  color: #1e1e2e;
+}
+
+#chat-send {
+  background: rgba(0, 255, 255, 0.9); /* Semi-transparent button */
+  color: #1e1e2e;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#chat-send:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4);
+}
