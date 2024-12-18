@@ -60,10 +60,10 @@ function onWindowResize() {
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
-  camera.position.z = t * -0.01;
+  camera.position.z = t * -0.012;
 
-  camera.position.x = t * -0.001;
-  camera.position.y = t * -0.001;
+  camera.position.x = t * -0.009;
+  camera.position.y = t * -0.009;
 
 }
 
