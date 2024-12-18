@@ -450,3 +450,66 @@ section li {
   transform: scale(1.1);
   box-shadow: 0 4px 10px rgba(0, 255, 255, 0.4);
 }
+
+
+/* Footer Section */
+/* Footer Section */
+.footer {
+  background-color: #1e1e2e;  /* Same dark background as your sections */
+  color: #fff;                /* White text */
+  padding: 2rem 1rem;         /* Adequate padding for better spacing */
+  text-align: center;         /* Center text and items */
+  margin-top: 3rem;           /* Space above footer */
+}
+
+/* Footer Content */
+.footer-content {
+  max-width: 1200px;  /* Limit the width for large screens */
+  margin: 0 auto;     /* Center the content */
+  padding: 0 1rem;    /* Some horizontal padding */
+}
+
+/* Social Links List */
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;   /* Center links horizontally */
+  gap: 1.5rem;               /* Space between social icons */
+}
+
+.social-links li {
+  display: inline-block;
+}
+
+.social-links a {
+  color: #fff;               /* White text color */
+  text-decoration: none;     /* Remove underline */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease;  /* Smooth scale and opacity transition */
+}
+
+.social-links a:hover {
+  transform: scale(1.1);     /* Slight scale effect on hover */
+  opacity: 0.8;              /* Slight fade on hover */
+}
+
+/* Social Icons Styling */
+.social-links img {
+  width: 30px;              /* Set the size of the icons */
+  height: 30px;
+  object-fit: contain;
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.social-links img:hover {
+  transform: scale(1.1);     /* Slight scale effect on hover for icons */
+}
+
+/* Footer Text */
+.footer p {
+  margin-top: 1rem;
+  color: #ddd;              /* Lighter text for the copyright */
+  font-size: 0.9rem;         /* Smaller font for footer text */
+}
+
