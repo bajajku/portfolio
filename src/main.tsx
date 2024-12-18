@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const addMessage = (message: string, isUser = false) => {
     const messageDiv = document.createElement("div");
     messageDiv.classList.add("chat-message", isUser ? "user" : "bot");
-    messageDiv.innerHTML = `<p>${message}</p>`;
+    messageDiv.innerHTML = `<p class="chat-color">${message}</p>`;
     chatBody.appendChild(messageDiv);
     chatBody.scrollTop = chatBody.scrollHeight;
   };
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Add a "bot is typing" message
       const typingMessage = document.createElement("div");
       typingMessage.classList.add("chat-message", "bot");
-      typingMessage.innerHTML = `<p>Thinking...</p>`;
+      typingMessage.innerHTML = `<p class="chat-color">Thinking...</p>`;
       chatBody.appendChild(typingMessage);
       chatBody.scrollTop = chatBody.scrollHeight;
 
@@ -170,3 +170,5 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Enter") handleChat();
   });
 });
+
+
