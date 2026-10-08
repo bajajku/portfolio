@@ -1,4 +1,4 @@
-/* Layers: sticky navigation 10; native dialog top layer; skip link 30. */
+/* Layers: navigation 10, keyboard skip link 30. */
 .site-header {
   position: sticky;
   top: 0;
@@ -20,6 +20,7 @@
   font-size: 15px;
   font-weight: 500;
   letter-spacing: -0.25px;
+  white-space: nowrap;
 }
 .wordmark > span {
   color: var(--subtle);
@@ -50,9 +51,12 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  gap: 45px;
+  gap: 44px;
   padding-top: 57px;
   padding-bottom: 42px;
+}
+.intro-copy {
+  max-width: 650px;
 }
 .intro h1 {
   font-size: 38px;
@@ -61,10 +65,11 @@
   font-weight: 500;
 }
 .intro p {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.8;
   color: var(--muted);
   margin-top: 19px;
+  max-width: 590px;
 }
 .intro-links {
   display: flex;
@@ -86,10 +91,10 @@
   display: grid;
   grid-template-columns: 245px 1fr;
   gap: 46px;
-  margin-top: 39px;
 }
 .experience-row + .experience-row {
-  padding-top: 38px;
+  padding-top: 26px;
+  margin-top: 26px;
   border-top: 1px solid #252a2e;
 }
 .role-meta h3 {
@@ -99,112 +104,83 @@
 }
 .role-meta p {
   font-size: 13px;
-  line-height: 1.8;
-  color: var(--muted);
+  line-height: 1.7;
+  color: var(--subtle);
   margin-top: 9px;
+  max-width: 215px;
 }
-.role-meta time {
-  display: block;
-  font-size: 12px;
-  color: var(--subtle);
-  margin-top: 13px;
-  font-family: "Geist Mono", monospace;
-}
-.role-detail ul {
-  margin: 0;
-  padding-left: 16px;
-  color: var(--muted);
+.role-detail h4 {
   font-size: 16px;
-  line-height: 1.8;
-}
-.role-detail li {
-  padding-left: 7px;
-  margin-bottom: 12px;
-}
-.role-detail li:last-child {
-  margin-bottom: 0;
-}
-.role-detail li::marker {
-  color: #626b73;
-  font-size: 10px;
-}
-.role-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-.role-bottom > .inline-link {
-  margin-top: 16px;
-  font-size: 12px;
-}
-.sheridan-roles > div + div {
-  margin-top: 26px;
-}
-.subrole-heading {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-.subrole-heading h4 {
-  font-size: 15px;
   line-height: 1.6;
+  margin-bottom: 9px;
 }
-.subrole-heading > span {
-  font-family: "Geist Mono", monospace;
-  font-size: 11px;
-  color: var(--subtle);
-}
-.sheridan-roles p {
+.role-detail > p {
   font-size: 16px;
   line-height: 1.8;
   color: var(--muted);
-  margin-top: 8px;
 }
-.education {
-  display: grid;
-  grid-template-columns: 245px 1fr;
-  gap: 46px;
-  margin-top: 39px;
-  padding-top: 28px;
+.experience-footnote {
+  padding-top: 26px;
+  margin-top: 28px;
   border-top: 1px solid #252a2e;
   font-size: 14px;
   line-height: 1.8;
-}
-.education > span {
-  color: var(--subtle);
-  font-size: 13px;
-}
-.education p > span {
   color: var(--muted);
+}
+.experience-footnote a {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  color: var(--text);
+}
+.experience-footnote svg {
+  width: 12px;
+  height: 12px;
+}
+.capability-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px 55px;
+}
+.capability-grid h3 {
+  font-size: 18px;
+  letter-spacing: -0.3px;
+  line-height: 1.5;
+}
+.capability-grid p:not(.technologies) {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--muted);
+  margin-top: 11px;
+}
+.foundation {
   font-size: 13px;
+  color: var(--subtle);
+  line-height: 1.8;
+  padding-top: 25px;
+  margin-top: 32px;
+  border-top: 1px solid #252a2e;
 }
 .coda-project {
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
+  grid-template-columns: 1.4fr 1fr;
   gap: 40px;
   align-items: center;
-}
-.project-kind {
-  font-size: 12px;
-  color: var(--subtle);
 }
 .project-text h3,
 .project-list h3 {
   font-size: 21px;
   letter-spacing: -0.4px;
-  margin: 9px 0 12px;
+  margin-bottom: 12px;
 }
-.project-text > p:not(.technologies),
+.project-text > p,
 .project-list p {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.8;
   color: var(--muted);
 }
 .coda-project img {
+  aspect-ratio: 1440 / 777;
   display: block;
   width: 100%;
   height: auto;
@@ -215,59 +191,25 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 44px;
-  margin-top: 37px;
-  padding-top: 32px;
+  margin-top: 32px;
+  padding-top: 30px;
   border-top: 1px solid #252a2e;
 }
-.project-list > article > .inline-link {
-  margin-top: 23px;
+.project-list .inline-link {
+  margin-top: 18px;
 }
-.project-list .project-links {
-  margin-top: 23px;
-}
-.open-source {
+.learning-section {
   display: grid;
   grid-template-columns: 245px 1fr;
   gap: 46px;
 }
-.open-source > div > p {
-  font-size: 16px;
+.learning-section p {
+  font-size: 15px;
   line-height: 1.8;
   color: var(--muted);
 }
-.learning-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 31px 48px;
-}
-.learning-grid h3 {
-  font-size: 16px;
-  line-height: 1.6;
-  letter-spacing: -0.15px;
-}
-.learning-grid p {
-  font-size: 14px;
-  color: var(--muted);
-  line-height: 1.85;
-  margin-top: 9px;
-}
-.skills-section {
-  display: grid;
-  grid-template-columns: 245px 1fr;
-  gap: 46px;
-}
-.skills-section p {
-  font-size: 14px;
-  line-height: 1.9;
-  color: var(--muted);
-}
-.skills-section p + p {
+.learning-section p + p {
   margin-top: 12px;
-}
-.skills-section p > span {
-  display: block;
-  color: var(--text);
-  font-size: 13px;
 }
 .contact-section {
   display: grid;
@@ -285,6 +227,11 @@
   line-height: 1.8;
   margin-top: 10px;
   max-width: 390px;
+}
+.contact-section .education {
+  font-size: 12px;
+  color: var(--subtle);
+  margin-top: 20px;
 }
 .email-row {
   display: flex;
@@ -333,86 +280,26 @@ footer a {
 footer a svg {
   transform: rotate(-90deg);
 }
-.case-dialog {
-  width: min(720px, calc(100% - 32px));
-  max-height: calc(100dvh - 40px);
-  background: #191c1f;
-  color: var(--text);
-  border: 1px solid #42484e;
-  border-radius: 8px;
-  padding: 0;
-}
-.case-dialog::backdrop {
-  background: #080a0ce0;
-}
-.case-content {
-  padding: 32px 36px;
-}
-.case-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-  font-size: 12px;
-  color: var(--muted);
-  margin-bottom: 24px;
-}
-.case-top button {
-  display: grid;
-  place-items: center;
-  padding: 9px;
-  border: 1px solid var(--line);
-  border-radius: 5px;
-}
-.case-content h2 {
-  font-size: 31px;
-  letter-spacing: -0.8px;
-  margin-bottom: 17px;
-}
-.case-context,
-.case-decisions p {
-  font-size: 15px;
-  color: var(--muted);
-  line-height: 1.85;
-}
-.case-decisions {
-  margin-top: 27px;
-}
-.case-decisions section {
-  padding-top: 23px;
-  border-top: 1px solid var(--line);
-  margin-top: 23px;
-}
-.case-decisions h3 {
-  font-size: 17px;
-  letter-spacing: -0.3px;
-  margin-bottom: 8px;
-}
-.case-boundary {
-  font-size: 12px;
-  line-height: 1.8;
-  color: var(--subtle);
-  margin-top: 28px;
-}
 @media (max-width: 1023px) {
+  .intro {
+    display: block;
+  }
+  .intro-copy {
+    max-width: 650px;
+  }
+  .intro-links {
+    margin-top: 22px;
+  }
   .experience-row,
-  .education,
-  .open-source,
-  .skills-section {
+  .learning-section {
     grid-template-columns: 205px 1fr;
     gap: 30px;
   }
-  .intro {
-    gap: 25px;
-  }
-  .intro h1 {
-    font-size: 35px;
-  }
-  .intro-links {
-    gap: 15px;
-  }
   .coda-project {
     gap: 27px;
+  }
+  .capability-grid {
+    gap: 30px 35px;
   }
   .contact-section {
     grid-template-columns: 1fr;
@@ -444,7 +331,7 @@ footer a svg {
   .site-header nav > a {
     font-size: 12px;
   }
-  .site-header nav > a[href="#now"] {
+  .site-header nav > a[href="#capabilities"] {
     display: none;
   }
   .resume-link {
@@ -452,7 +339,6 @@ footer a svg {
     gap: 6px;
   }
   .intro {
-    display: block;
     padding-top: 36px;
     padding-bottom: 33px;
   }
@@ -462,14 +348,13 @@ footer a svg {
     line-height: 1.25;
   }
   .intro p {
-    font-size: 15px;
+    font-size: 16px;
     margin-top: 18px;
   }
   .desktop-break {
     display: none;
   }
   .intro-links {
-    margin-top: 21px;
     gap: 24px;
   }
   .experience-section {
@@ -477,114 +362,75 @@ footer a svg {
   }
   .experience-row {
     grid-template-columns: 1fr;
-    gap: 19px;
-    margin-top: 28px;
+    gap: 15px;
   }
   .experience-row + .experience-row {
-    padding-top: 28px;
-  }
-  .role-meta {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 5px 18px;
+    padding-top: 25px;
+    margin-top: 25px;
   }
   .role-meta h3 {
     font-size: 19px;
-    grid-column: 1;
-  }
-  .role-meta h3 br {
-    display: none;
   }
   .role-meta p {
-    grid-column: 1;
-    grid-row: 2;
     font-size: 12px;
-    margin-top: 0;
-  }
-  .role-meta time {
-    grid-column: 2;
-    grid-row: 1;
-    font-size: 10px;
+    max-width: none;
     margin-top: 4px;
-    text-align: right;
   }
-  .role-detail ul {
+  .role-detail h4 {
     font-size: 15px;
-    line-height: 1.85;
+    margin-bottom: 6px;
   }
-  .role-detail li {
-    padding-left: 5px;
-    margin-bottom: 12px;
+  .role-detail > p {
+    font-size: 15px;
   }
-  .technologies {
-    font-size: 12px !important;
+  .experience-footnote {
+    font-size: 13px;
+    padding-top: 23px;
+    margin-top: 25px;
   }
-  .sheridan-roles p {
-    font-size: 14px;
-  }
-  .subrole-heading {
-    gap: 3px 12px;
-  }
-  .subrole-heading h4 {
-    font-size: 14px;
-  }
-  .subrole-heading > span {
-    font-size: 10px;
-  }
-  .education {
+  .capability-grid {
     grid-template-columns: 1fr;
-    gap: 8px;
-    margin-top: 29px;
-    padding-top: 24px;
+    gap: 29px;
   }
-  .education > span {
+  .capability-grid h3 {
+    font-size: 17px;
+  }
+  .capability-grid p:not(.technologies) {
+    font-size: 15px;
+    margin-top: 8px;
+  }
+  .foundation {
     font-size: 12px;
+    margin-top: 26px;
+    padding-top: 23px;
   }
   .coda-project {
     grid-template-columns: 1fr;
     gap: 25px;
   }
   .coda-project img {
-    width: 100%;
     max-width: 550px;
   }
-  .project-text > p:not(.technologies),
+  .project-text > p,
   .project-list p {
-    font-size: 14px;
+    font-size: 15px;
   }
   .project-list {
     grid-template-columns: 1fr;
-    gap: 28px;
-    margin-top: 29px;
+    gap: 26px;
+    margin-top: 28px;
     padding-top: 26px;
   }
   .project-list > article + article {
     padding-top: 25px;
     border-top: 1px solid #252a2e;
   }
-  .project-links {
+  .learning-section {
+    grid-template-columns: 1fr;
     gap: 20px;
   }
-  .open-source,
-  .skills-section {
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
-  .open-source > div > p {
-    font-size: 14px;
-  }
-  .learning-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-  .learning-grid h3 {
-    font-size: 16px;
-  }
-  .learning-grid p {
-    font-size: 14px;
-  }
-  .contact-section p {
-    font-size: 14px;
+  .learning-section p {
+    font-size: 15px;
   }
   .email-row {
     gap: 12px;
@@ -592,20 +438,6 @@ footer a svg {
   .email-row > a {
     font-size: 14px;
     gap: 8px;
-  }
-  .case-content {
-    padding: 24px;
-  }
-  .case-top {
-    font-size: 11px;
-    line-height: 1.6;
-  }
-  .case-context,
-  .case-decisions p {
-    font-size: 14px;
-  }
-  .case-content h2 {
-    font-size: 28px;
   }
   footer.container {
     font-size: 11px;
@@ -633,12 +465,6 @@ footer a svg {
   }
   .email-row > a {
     font-size: 12px;
-  }
-  .role-meta time {
-    font-size: 9px;
-  }
-  .role-meta h3 {
-    font-size: 17px;
   }
 }
 @media (prefers-reduced-transparency: reduce) {

@@ -1,6 +1,6 @@
 # Kunal Bajaj portfolio
 
-A dark, experience-first portfolio built with React and TypeScript. Employment history is immediately readable, followed by selected projects, open-source contributions, current learning and technical foundations.
+A dark, concise portfolio presenting Kunal as a software engineer focused on applied AI. Employer summaries establish context; capabilities describe how he can contribute; project examples link directly to real work. Detailed chronology and metrics are available in the linked resume.
 
 ## Development
 
@@ -12,26 +12,25 @@ npm run lint
 npm run preview -- --host 127.0.0.1
 ```
 
-The static production build is generated in `dist/`. The existing live site is https://bajajku-github-io.vercel.app/. The legacy `npm run deploy` command targets GitHub Pages, which is a separate hosting destination.
+The static build is generated in `dist/`. Pushing `main` deploys the existing Vercel project at https://bajajku-github-io.vercel.app/. The legacy `npm run deploy` command targets a separate GitHub Pages destination.
 
-## Design decisions
+## Design and editorial decisions
 
-Guidance: [taste-skill](https://github.com/Leonxlnx/taste-skill), including its minimalist guidance. Dials: `DESIGN_VARIANCE: 3`, `MOTION_INTENSITY: 1`, `VISUAL_DENSITY: 5`.
+Guidance: [taste-skill](https://github.com/Leonxlnx/taste-skill), including minimalist guidance. Dials: `DESIGN_VARIANCE: 3`, `MOTION_INTENSITY: 1`, `VISUAL_DENSITY: 4`.
 
-The previous interface mixed 3D backgrounds, theme controls and chat-style presentation with professional content. The first redesign still had decorative panels and oversized editorial copy. The revised brief calls for dark, simple and easy to read, with experience first and no personality section.
+The user requested a simple dark page, with experience before other content and no personality section. The later editorial direction is an abstract professional introduction, rather than a second resume. The page therefore summarizes three employers, connects skills to four contribution areas and keeps project descriptions brief. Long case studies, bullet lists, numerical results and duplicate timelines were removed. Research articles and deeper project narratives can be added when actual material is ready; no placeholders or unpublished posts are presented as finished work.
 
-The page uses a consistent charcoal palette, self-hosted Geist typography, restrained separators and one pale green interaction accent. Employment details stay expanded. Glass is limited to the navigation backdrop. Project images show actual work; decorative generated imagery would interrupt the requested experience-first reading order. No entry animations or continuous motion are used. Layouts collapse explicitly below 768px.
+Charcoal colors, self-hosted Geist type and quiet separators keep the reading order clear. Glass is limited to the navigation backdrop. The project image is a real screenshot. All multi-column layouts collapse explicitly on mobile. Motion is limited to native scrolling and button feedback, with reduced-motion support.
 
 ## Content and evidence
 
-- `src/App.tsx`: experience, page composition, links and native project dialogs.
-- `src/content.ts`: project case studies and current learning.
-- `public/Kunal_Bajaj_Resume.pdf`: reviewed applied-AI resume from ResumeLab's October 8, 2026 collection.
-- `public/images/coda-meeting.webp`: optimized screenshot from Kunal's Coda repository, `meet-main/.github/assets/coda/meeting-with-participants.png`.
-- Professional claims are grounded in ResumeLab's profile, reviewed evidence and direct user clarifications. Existing Google platforms are described as existing; the anomaly architecture is described as designed, rather than deployed.
-- GPT implementation, inference engineering, agent papers and interpretability are ongoing learning. The personality section is omitted at the user's request.
-- AutoMed's precision/recall results and the separate evaluation framework's F1 result are kept distinct. Employer source code and internal data are not included.
+- `src/content.ts`: employer summaries and capabilities.
+- `src/App.tsx`: introduction, projects, current exploration and contact.
+- Professional claims are grounded in ResumeLab's profile, reviewed repository evidence and direct clarifications, including LoRA, vLLM and VAC guardrails. Skills are described at the scope established by that evidence. No new metrics, ownership, employment scope or results are inferred.
+- GPT from scratch, inference study, agent papers and interpretability are presented as current learning.
+- The linked resume remains the reviewed applied-AI PDF from ResumeLab's October 8 collection.
+- `public/images/coda-meeting.webp` is an optimized real screenshot from Kunal's Coda repository (`meet-main/.github/assets/coda/meeting-with-participants.png`).
 
 ## Accessibility and dependencies
 
-Native dialogs support Escape dismissal and focus restoration. A skip link, keyboard focus styles, reduced-motion support and clipboard-failure feedback are included. Fonts, screenshot and resume are hosted with the site. External services load only when visitors follow a link. No analytics, model API, chat simulation or Three.js runtime is included in this portfolio.
+A skip link, visible keyboard focus, readable contrast, reduced-motion support and clipboard success/failure feedback are included. Fonts, screenshot and resume are served with the site. External services load only when visitors follow a link. No analytics, model API, chat simulation or Three.js runtime is included in this portfolio.
